@@ -1,14 +1,14 @@
-require("./db/connect");
 const express = require("express");
-const colors = require("colors");
 const app = express();
 const tasks = require("./routes/tasks");
+const colors = require("colors");
+const connectDB = require("./db/connect");
+require("dotenv").config();
 
 // colors
-
 colors.setTheme({
-  custom: ["yellow", "italic"],
-  cyber: ["yellow", "bgBlack", "italic"],
+  custom: ["red", "italic"],
+  cyber: ["red", "bgBlack", "italic"],
 });
 
 // middleware
@@ -22,6 +22,16 @@ app.get("/", (req, res) => {
 app.use("/api/v1/tasks", tasks);
 
 const port = 3000;
-app.listen(port, () => {
-  console.log(`Server is  listening at http://localhost:${port}`.custom);
-});
+
+const start = async () => {
+  try {
+    await connectDB(process.env.MONGO_URI);
+    app.listen(port, () => {
+      console.log(`Server is  listening at http://localhost:${port}`.custom);
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+start();
