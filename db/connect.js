@@ -8,5 +8,5 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log("Connected to the mongoDB successfully."))
+  .then(() => console.log("Connected to the mongoDB successfully!".cyber))
   .catch((err) => console.log(err));
