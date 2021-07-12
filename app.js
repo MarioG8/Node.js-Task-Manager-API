@@ -5,6 +5,7 @@ const colors = require("colors");
 const connectDB = require("./db/connect");
 require("dotenv").config();
 const notFound = require("./middleware/notFound");
+const errorHandlerMiddleware = require("./middleware/error-handler");
 
 // colors
 colors.setTheme({
@@ -18,6 +19,7 @@ app.use(express.json());
 
 // routes
 app.use("/api/v1/tasks", tasks);
+app.use(errorHandlerMiddleware);
 app.use(notFound);
 
 const port = 3000;

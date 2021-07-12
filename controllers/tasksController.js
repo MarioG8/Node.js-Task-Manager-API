@@ -44,7 +44,6 @@ const updateTask = asyncWrapper(async (req, res) => {
       .status(404)
       .json({ msg: `This task with id: ${taskID} does not exist!` });
   }
-
   res.status(200).json({ task });
 });
 
