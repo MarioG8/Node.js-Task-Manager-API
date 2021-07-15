@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400");
+@import url("https://fonts.googleapis.com/css2?family=Joti+One&family=Nunito&display=swap");
 *,
 ::after,
 ::before {
@@ -40,17 +40,17 @@
   --black: #222;
   --white: #fff;
   --red-light: #f8d7da;
-  --red-dark: #842029;
+  --red-dark: #b8232f;
   --green-light: #d1e7dd;
-  --green-dark: #0f5132;
+  --green-dark: #116b41;
 
   /* typography */
-  --headingFont: "Inconsolata", monospace;
-  --bodyFont: "Montserrat", sans-serif;
+  --headingFont: "Nunito", sans-serif;
+  --bodyFont: "Nunito", sans-serif;
   --smallText: 0.7em;
   /* rest */
   --backgroundColor: var(--grey-50);
-  --textColor: var(--grey-1000);
+  --textColor: var(--grey-300);
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
@@ -71,9 +71,7 @@ html {
 }
 
 body {
-  /* background: var(--backgroundColor); */
-  /* background: var(--backgroundColor); */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
     url("/img/todo_001.jpg");
   background-position: center;
   color: var(--textColor);
@@ -141,7 +139,7 @@ a {
   cursor: pointer;
   appearance: none;
   color: var(--white);
-  background: var(--primary-500);
+  background: var(--green-dark);
   border: none;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
@@ -153,7 +151,7 @@ a {
 
 .btn:hover {
   color: var(--white);
-  background: var(--primary-700);
+  background: green;
   box-shadow: var(--shadow-2);
 }
 button.small {
@@ -218,6 +216,9 @@ textarea {
 
 .task-form,
 .single-task-form {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/img/todo_005.jpg");
+  background-position: center;
   width: 90vw;
   max-width: var(--fixed-width);
   margin: 0 auto;
@@ -238,6 +239,7 @@ textarea {
     display: flex;
   }
   .task-input {
+    outline: none;
     border-radius: 0;
     border-top-left-radius: var(--borderRadius);
     border-bottom-left-radius: var(--borderRadius);
@@ -276,7 +278,7 @@ form > :last-child {
   color: var(--red-dark);
 }
 .text-success {
-  color: var(--green-dark);
+  color: greenyellow;
 }
 /* loading */
 @keyframes spinner {
@@ -345,8 +347,11 @@ form > :last-child {
   gap: 1rem;
 }
 .single-task {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/img/todo_003.jpg");
+  background-position: top;
   padding: 1rem 2.5rem;
-  background: var(--white);
+  /* background: var(--white); */
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-2);
   transition: var(--transition);
@@ -390,7 +395,7 @@ form > :last-child {
 .delete-btn,
 .edit-link {
   background: transparent;
-  font-size: 0.75rem;
+  font-size: 1rem;
   border: transparent;
   cursor: pointer;
 }
