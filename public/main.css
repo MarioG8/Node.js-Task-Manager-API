@@ -16,6 +16,7 @@
   --primary-333: #eff0f2;
   --primary-335: #777470;
   --primary-336: #659b43;
+  --primary-337: #1e3255;
 
   /* main */
   --primary-500: #645cff;
@@ -78,7 +79,7 @@ html {
 }
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("/img/todo_001.jpg");
   background-position: center;
   color: var(--textColor);
@@ -289,7 +290,7 @@ form > :last-child {
   color: var(--red-dark);
 }
 .text-success {
-  color: greenyellow;
+  color: var(--primary-333);
 }
 /* loading */
 @keyframes spinner {
@@ -358,6 +359,7 @@ form > :last-child {
   gap: 1rem;
 }
 .single-task {
+  text-decoration: underline;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.42)),
     url("/img/todo_003.jpg");
   background-position: top;
@@ -385,7 +387,7 @@ form > :last-child {
 }
 .single-task .fa-check-circle {
   font-size: 1rem;
-  color: var(--green-dark);
+  color: var(--primary-336);
   visibility: hidden;
 }
 .task-completed h5 {
@@ -424,6 +426,10 @@ form > :last-child {
 
 .single-task-form h4 {
   text-align: center;
+  font-family: var(--primaryFont);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-333);
 }
 
 .single-task-form p {
@@ -445,6 +451,10 @@ form > :last-child {
   font-size: 1rem;
 }
 
+.task-edit-id {
+  color: #fff;
+}
+
 .task-edit-completed {
   width: auto;
 }
@@ -455,13 +465,12 @@ form > :last-child {
   text-align: center;
   margin-top: 6rem;
   border: 2px solid transparent;
-  background: var(--black);
+  background: var(--primary-337);
 }
 .back-link:hover {
-  background: transparent;
-  border: 2px solid rgb(24, 23, 23);
-  color: rgb(36, 35, 35);
-  text-decoration: underline;
+  background: var(--primary-333);
+  border: 2px solid var(--primary-337);
+  color: var(--primary-337);
   font-weight: 700;
 }
 
