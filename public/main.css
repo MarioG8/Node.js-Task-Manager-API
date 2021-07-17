@@ -455,6 +455,10 @@ form > :last-child {
   color: #fff;
 }
 
+.task-edit-name {
+  outline: none;
+}
+
 .task-edit-completed {
   width: auto;
 }
@@ -477,4 +481,25 @@ form > :last-child {
 .single-task-form .form-alert {
   text-align: center;
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .task-edit-id {
+    font-size: 0.8rem;
+  }
+  .single-task-form .form-control {
+    gap: 0 0rem;
+  }
+
+  .delete-btn,
+  .edit-link {
+    font-size: 0.8rem;
+  }
+  .task-completed .fa-check-circle {
+    font-size: 0.8rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
 }
